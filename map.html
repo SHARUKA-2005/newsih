@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Transport Info</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Transport Availability Map</h1>
+
+    <!-- Image map for clickable regions -->
+    <div class="map-container">
+        <img src="./Screenshot 2024-09-10 190859.png" alt="Map" usemap="#citymap">
+        <map name="citymap">
+            <area shape="rect" coords="355,170,420,200" alt="Nellore" onclick="showTransports('Nellore')">
+            <area shape="rect" coords="310,185,370,215" alt="Tirupati" onclick="showTransports('Tirupati')">
+            <area shape="rect" coords="270,230,330,260" alt="Chittoor" onclick="showTransports('Chittoor')">
+            <area shape="rect" coords="340,250,420,280" alt="Chennai" onclick="showTransports('Chennai')">
+            <area shape="rect" coords="340,310,430,340" alt="Pondicherry" onclick="showTransports('Pondicherry')">
+            <area shape="rect" coords="470,290,540,320" alt="Mamallapuram" onclick="showTransports('Mamallapuram')">
+        </map>
+    </div>
+
+    <!-- Table to display city name and transport availability -->
+    <div class="table-container">
+        <table id="transportTable">
+            <thead>
+                <tr>
+                    <th>City</th>
+                    <th>Number of Transports</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Table to display driver details -->
+    <div class="table-container" id="driverDetails" style="display:none;">
+        <table>
+            <thead>
+                <tr>
+                    <th>Driver Name</th>
+                    <th>Contact Number</th>
+                </tr>
+            </thead>
+            <tbody id="driverTableBody">
+                <!-- Driver rows will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
